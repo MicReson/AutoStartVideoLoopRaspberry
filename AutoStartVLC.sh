@@ -1,5 +1,8 @@
 #!/bin/bash
 
-pathToFile="./LoopVideo.mp4"
+user_name=""
 
-vlc --alsa-audio-device hw:0,0 --fullscreen --no-osd --loop --mouse-hide-timeout 0 $pathToFile
+# Here you need to add the absolute path
+pathToFile="/home/$user_name/Documents/AutoStartVideo/LoopVideo.mp4"
+
+cvlc --fullscreen --no-osd --loop --mouse-hide-timeout 0 --aout pulse $pathToFile
