@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Set user name
 user_name=""
 
 # Here you need to add the absolute path
