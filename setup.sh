@@ -2,13 +2,17 @@
 
 echo "Starting dependency installation..."
 
+# Write User name
+user_name=""
+
 sudo apt-get update
 sudo apt-get install -y vlc
+sudo apt-get install -y pulseaudio
 
-sudo mkdir ~/Documents/AutoStartVideo
-sudo mkdir ~/.config/AutoPlayLoopVideo
+mkdir -p /home/$user_name/Documents/AutoStartVideo
+mkdir -p /home/$user_name/.config/systemd/user
 
-sudo mv ./AutoStartVLC.sh ~/Documents/AutoStartVideo
-sudo mv ./VideoPlayback.desktop ~/.config/AutoPlayLoopVideo
+mv ./AutoStartVLC.sh /home/$user_name/Documents/AutoStartVideo
+mv ./VideoPlayback.service ~/.config/systemd/user
 
 echo "Setup Completed complete!"
