@@ -1,0 +1,14 @@
+[Unit]
+Description=My Video Player (User Service)
+# These lines ensure PulseAudio is running before this service starts
+After=pulseaudio.service
+Requires=pulseaudio.service
+
+[Service]
+# Use the full, absolute path to your script and your video file
+ExecStart=/home/loopvideo2/Documents/AutoStartVideo/AutoStartVLC.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
