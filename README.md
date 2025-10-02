@@ -6,7 +6,7 @@ This is a simple autostart and AV playback, intended to be use with raspberry pi
 2. Add the user name on the `AutoStartVLC.sh` script and on the `videoplayback.service`.
 3. Run `setup.sh` and wait for the process to be completed.
 4. Move or copy the video to be looped to the path `~/Documents/AutoStartVideo`.
-5. Make sure pulse audio has a default audio output device, most of the times is sink#2 but you need to make the change permanent.
+5. Setup pulse audio (the setup is on the next section of the README.md)
 6. Run `sudo loginctl enable-linger <USER_NAME>` to make the service autostart without login from the user.
 7. After the service is in the right place, run `systemctl --user daemon-reload`.
 8. Run `systemctl --user enable videoplayback.service` to make it run on boot.
