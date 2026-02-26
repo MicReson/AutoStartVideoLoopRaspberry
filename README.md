@@ -9,7 +9,7 @@ This is a simple autostart and AV playback, intended to be use with raspberry pi
 5. Setup pulse audio (the setup is on the next section of the README.md)
 6. Run `sudo loginctl enable-linger <USER_NAME>` to make the service autostart without login from the user.
 7. After the service is in the right place, run `systemctl --user daemon-reload`.
-8. Run `systemctl --user enable videoplayback.service` to make it run on boot.
+8. Run `systemctl --user enable VideoPlayback.service` to make it run on boot.
 9. Run `sudo Reboot` and wait for playback to start.
 
 # Setting up Pulse Audio
